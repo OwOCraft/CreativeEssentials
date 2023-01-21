@@ -16,7 +16,7 @@ import java.util.EventListener;
 import static org.bukkit.GameMode.CREATIVE;
 import static org.bukkit.GameMode.SURVIVAL;
 
-public final class CreativeEssentials extends JavaPlugin implements Listener, EventListener {
+public final class CreativeEssentials extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
