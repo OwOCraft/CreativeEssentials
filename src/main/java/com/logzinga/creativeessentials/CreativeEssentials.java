@@ -33,6 +33,7 @@ public final class CreativeEssentials extends JavaPlugin implements Listener, Ev
                 System.out.println("You cannot change your game mode to survival via command block, try in chat");
             }
         }
+
         return true;
     }
 }
