@@ -1,0 +1,4 @@
+name: CreativeEssentials
+version: '${project.version}'
+main: com.logzinga.creativeessentials.CreativeEssentials
+api-version: 1.19
