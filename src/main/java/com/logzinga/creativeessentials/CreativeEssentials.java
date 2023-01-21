@@ -26,7 +26,7 @@ public final class CreativeEssentials extends JavaPlugin implements Listener, Ev
         if (command.getName().equalsIgnoreCase("survival")) {
             if (sender instanceof Player) {
                 Player p = (Player)  sender;
-                p.setGameMode(SURVIVAL`);
+                p.setGameMode(SURVIVAL);
             }else if(sender instanceof ConsoleCommandSender) {
                 System.out.println("The console cannot be in survival, you can try this in-game");
             }else if(sender instanceof BlockCommandSender) {
