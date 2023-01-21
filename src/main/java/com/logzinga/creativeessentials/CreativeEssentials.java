@@ -1,5 +1,6 @@
 package com.logzinga.creativeessentials;
 
+import org.bukkit.block.Block;
 import org.bukkit.command.BlockCommandSender;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -10,6 +11,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.EventListener;
 
+import static org.bukkit.GameMode.CREATIVE;
 import static org.bukkit.GameMode.SURVIVAL;
 
 public final class CreativeEssentials extends JavaPlugin implements Listener, EventListener {
@@ -31,6 +33,17 @@ public final class CreativeEssentials extends JavaPlugin implements Listener, Ev
                 System.out.println("The console cannot be in survival, you can try this in-game");
             }else if(sender instanceof BlockCommandSender) {
                 System.out.println("You cannot change your game mode to survival via command block, try in chat");
+            }
+        }
+
+        if (command.getName().equalsIgnoreCase("creative")) {
+            if(sender instanceof  Player) {
+                Player p = (Player)  sender;
+                p.setGameMode(CREATIVE);
+            }else if(sender instanceof  ConsoleCommandSender) {
+                System.out.println("The console cannot be in creative, you can try this in-game");
+            }else if(sender instanceof BlockCommandSender) {
+                System.out.println("You cannot change your game mode to creative via command block, try in chat");
             }
         }
 
