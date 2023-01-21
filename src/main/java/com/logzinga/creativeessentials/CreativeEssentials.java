@@ -13,8 +13,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.EventListener;
 
-import static org.bukkit.GameMode.CREATIVE;
-import static org.bukkit.GameMode.SURVIVAL;
+import static org.bukkit.GameMode.*;
 
 public final class CreativeEssentials extends JavaPlugin implements Listener {
 
@@ -54,8 +53,19 @@ public final class CreativeEssentials extends JavaPlugin implements Listener {
                 Player p = (Player)  sender;
                 World w = p.getWorld();
                 p.getLocation();
-                Location destination = new Location(w, 0, -60, 0);
+                Location destination = new Location(w, 0, -60, 0); // AHHH THIS MEANS IT ONLY WORKS ON THE OVER WORLD, DOING THIS COMMAND ANYWHERE ELSE DOESNT WORK
                 p.teleport(destination); // ISSUE WITH THIS IS THAT IT ONLY WORKS ON BASIC SUPER FLAT
+            }
+        }
+
+        if(command.getName().equalsIgnoreCase("spectator")) { // SPECTATOR WOOOOO
+            if(sender instanceof  Player) {
+                Player p = (Player)  sender;
+                p.setGameMode(SPECTATOR);
+            }else if(sender instanceof  ConsoleCommandSender) {
+                System.out.println("You cannot set your game mode to spectator, try in-game");
+            }else if(sender instanceof  BlockCommandSender) {
+                System.out.println("You cannot set your game mode to spectator, try the chat box");
             }
         }
 
