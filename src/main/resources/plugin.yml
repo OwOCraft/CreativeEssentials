@@ -2,3 +2,7 @@ name: CreativeEssentials
 version: '${project.version}'
 main: com.logzinga.creativeessentials.CreativeEssentials
 api-version: 1.19
+commands:
+  survival:
+    description: Sets the Player to survival
+    usage: /<command>
