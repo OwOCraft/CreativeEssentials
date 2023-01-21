@@ -1,5 +1,7 @@
 package com.logzinga.creativeessentials;
 
+import org.bukkit.Location;
+import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.command.BlockCommandSender;
 import org.bukkit.command.Command;
@@ -44,6 +46,16 @@ public final class CreativeEssentials extends JavaPlugin implements Listener, Ev
                 System.out.println("The console cannot be in creative, you can try this in-game");
             }else if(sender instanceof BlockCommandSender) {
                 System.out.println("You cannot change your game mode to creative via command block, try in chat");
+            }
+        }
+
+        if(command.getName().equalsIgnoreCase("spawn")) {
+            if(sender instanceof  Player) {
+                Player p = (Player)  sender;
+                World w = p.getWorld();
+                p.getLocation();
+                Location destination = new Location(w, 0, -60, 0);
+                p.teleport(destination); // ISSUE WITH THIS IS THAT IT ONLY WORKS ON BASIC SUPER FLAT
             }
         }
 

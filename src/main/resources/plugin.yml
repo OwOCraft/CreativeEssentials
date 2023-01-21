@@ -9,3 +9,6 @@ commands:
   creative:
     description: : Sets the player to creative
     usage: /<command>
+  spawn:
+    description:  Teleports the Player to Spawn (0, -60, 0)
+    usage: /<command>
