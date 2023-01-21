@@ -25,7 +25,7 @@ public final class CreativeEssentials extends JavaPlugin implements Listener, Ev
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
-        if (command.getName().equalsIgnoreCase("survival")) {
+        if (command.getName().equalsIgnoreCase("survival")) { // these lines set the Player to survival
             if (sender instanceof Player) {
                 Player p = (Player)  sender;
                 p.setGameMode(SURVIVAL);
@@ -36,7 +36,7 @@ public final class CreativeEssentials extends JavaPlugin implements Listener, Ev
             }
         }
 
-        if (command.getName().equalsIgnoreCase("creative")) {
+        if (command.getName().equalsIgnoreCase("creative")) { // These lines set the Player to creative
             if(sender instanceof  Player) {
                 Player p = (Player)  sender;
                 p.setGameMode(CREATIVE);
