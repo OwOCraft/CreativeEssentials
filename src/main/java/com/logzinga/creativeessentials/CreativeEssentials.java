@@ -53,7 +53,7 @@ public final class CreativeEssentials extends JavaPlugin implements Listener {
                 Player p = (Player)  sender;
                 World w = p.getWorld();
                 p.getLocation();
-                Location destination = new Location(w, 0, -60, 0); // AHHH THIS MEANS IT ONLY WORKS ON THE OVER WORLD, DOING THIS COMMAND ANYWHERE ELSE DOESNT WORK
+                Location destination = w.getSpawnLocation(); // AHHH THIS MEANS IT ONLY WORKS ON THE OVER WORLD, DOING THIS COMMAND ANYWHERE ELSE DOESNT WORK
                 p.teleport(destination); // ISSUE WITH THIS IS THAT IT ONLY WORKS ON BASIC SUPER FLAT
             }
         }
