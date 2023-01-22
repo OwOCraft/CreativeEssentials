@@ -69,6 +69,13 @@ public final class CreativeEssentials extends JavaPlugin implements Listener {
             }
         }
 
+        if(command.getName().equalsIgnoreCase("creativeessentialsabout")) {
+            if(sender instanceof  Player) {
+                Player p = (Player) sender;
+                p.sendMessage("CreativeEssentials");
+                p.sendMessage("Developed by OwOCraft (logzinga), for use in OwOCraft Servers.");
+            }
+        }
         return true;
+        }
     }
-}

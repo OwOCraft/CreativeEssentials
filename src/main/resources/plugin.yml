@@ -15,4 +15,7 @@ commands:
   spectator:
     description:  Sets the Player to spectator
     usage: /<command>
+  creativeessentialsabout:
+    description: About CreativeEssentials
+    usage: /<command>
 
