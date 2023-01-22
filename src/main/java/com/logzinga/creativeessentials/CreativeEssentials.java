@@ -48,13 +48,13 @@ public final class CreativeEssentials extends JavaPlugin implements Listener {
             }
         }
 
-        if(command.getName().equalsIgnoreCase("spawn")) {
+        if(command.getName().equalsIgnoreCase("spawn")) { // sends player to the worlds spawn point
             if(sender instanceof  Player) {
                 Player p = (Player)  sender;
                 World w = p.getWorld();
                 p.getLocation();
-                Location destination = w.getSpawnLocation(); // AHHH THIS MEANS IT ONLY WORKS ON THE OVER WORLD, DOING THIS COMMAND ANYWHERE ELSE DOESNT WORK
-                p.teleport(destination); // ISSUE WITH THIS IS THAT IT ONLY WORKS ON BASIC SUPER FLAT
+                Location destination = w.getSpawnLocation();
+                p.teleport(destination);
             }
         }
 
